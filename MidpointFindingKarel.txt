@@ -1,0 +1,53 @@
+import stanford.karel.*;
+
+public class BlankKarel extends SuperKarel {
+	public void run() {
+		 travelNorthEast();
+
+	        travelSouthWest();
+
+	        putBeeper();
+
+	    }
+
+	    private void travelNorthEast() {
+
+	        while (frontIsClear()) {
+
+	            move();
+
+	            turnLeft();
+
+	            move();
+
+	            turnRight();
+
+	        }
+
+	    }
+
+	    private void travelSouthWest() {
+
+	        turnRight();
+
+	        while (frontIsClear()) {
+
+	            move();
+
+	            if (frontIsClear()) {
+
+	                move();
+
+	                turnRight();
+
+	                move();
+
+	                turnLeft();
+
+	            }
+
+	        }
+
+		/* You fill this in */
+	}
+}
